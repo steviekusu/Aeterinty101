@@ -59,19 +59,11 @@
 
 <!-- Loader animation -->
 
-	<div id="">
-			<center>
-				<a class="button" href="" id="makingdifferenttimer" rel="nofollow" style="display: none;"
-					target="_blank">Download</a>
-				<div id="mdtimer">
-					<img border="0" src="http://www.pictureshack.us/images/16942_Preloader_10.gif" alt="Pulpit rock"
-						loading-bar-spinner width="128" height="128"></div>
-			</center>
-
-		</div>
+<div id="loading-bar-spinner" class="svg"><img src="loader.svg">
+	<div><b>LOADING</b></div>
+</div>
 
 
-<!-- Registration form -->
 
 	
 			
@@ -85,11 +77,13 @@
 
 		</div>
 
+		<!-- Registration form -->
+
 		<div class="testbox">
 			<h1>Registration</h1>
 
 			<div id = "formBody">
-				
+				<form >
 					<hr>
 					<div class="accounttype">
 						<input type="radio" value="None" id="radioOne" name="account" checked />
@@ -102,7 +96,7 @@
 					<input type="text" name="name" id="Regname" placeholder="Name" required />
 	
 					<label id="icon" for="image"><i class="icon-user"></i></label>
-					<input type="text" name="image" id="Regimg1" placeholder="First Image" required />
+					<input type="text" name="image" id="Regimg" placeholder="First Image" required />
 	
 					<label id="icon" for="image2"><i class="icon-user"></i></label>
 					<input type="text" name="image2" id="Regimg2" placeholder="Second Image" required />
@@ -124,6 +118,7 @@
 					<div>
 							<button class="regBtns buttons" >Register</button>
 					</div>
+				</form>
 					
 				
 			</div>
@@ -194,7 +189,7 @@
 								<h3>Owners Details</h3>
 								<p>This is : {{name}}</p>
 								<p>Owners Address : {{creatorAddress}}</p>
-								<p>Price of land : {{Price}}</p>
+								<p>Price of land : {{price}}</p>
 								<p>{{description}}</p>
 							</div>
 						</div>
