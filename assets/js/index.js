@@ -116,7 +116,7 @@ $('.regBtns').click(async function(){
   const land_name = ($('#Regname').val());
   const land_image1 = ($("#Regimg1").val());
   const land_image2 = ($("#Regimg2").val());
-  const land_price = ($("#regPrice").val());
+  const land_price = ($("#RegPrice").val());
   const land_description = ($("#Regdescription").val());
   console.log("-------------------------------------")
   console.log("Name:",land_name)
@@ -153,7 +153,6 @@ $('.regBtns').click(async function(){
   // // e.preventDefault();
 
   $("#loading-bar-spinner").hide();
-  // location.reload(true);
-
+  location.reload(true);
 });
 
