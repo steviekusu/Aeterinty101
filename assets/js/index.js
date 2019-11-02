@@ -40,7 +40,7 @@ contract Landify =
     state.lands[index].id
 `;
 
-const contractAddress = 'ct_Q21QjSVYRF24WvSnLmrteLJxbTefNfZMqNBpcickagKtPLkaq';
+const contractAddress = 'ct_CnHYLN6EBR2JjZE1Jcq7v1NkTsyAyBAnkSYXjJNYH8MApSF73';
 var LandArray = [];
 var client = null;
 var LandLength = 0;
