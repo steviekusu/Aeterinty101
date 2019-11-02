@@ -1,3 +1,3 @@
 # Landify
 
-æNAIJA is a dæpp powered by æternity Blockchain, that connects a buyer directly to a seller. æNAIJA cuts off the middleman or intermidiaries(finiancial institution) buyers can pay for products without worring about extra charges imposed on them by banks, all they basically need is thier æ wallet and they can start trading. æNAIJA is for everyone, anyone that can sell or buy as long as they live in Nigeria
+This is a simple DApp for Land titles. This DApp was built base on the issues associated to Land ownership and documentation. A lot of people have had histories of Land conflicts and in order to avoid such from happening. Solutions like this can be deployed to address this.
