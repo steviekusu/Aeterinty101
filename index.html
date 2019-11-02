@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,127 +29,90 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
 		type='text/css'>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-
-
 </head>
-
 <body>
-
 	<!-- Top menu -->
 	<nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
 		<div class="container">
 			<h2><a href="index.html">Landify</a></h2>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link scroll-link" href="#top-content">Top</a>
-						<a class="nav-link" href="register.html">Register Land</a>
+						<a class="nav-link" href="#formBody">Register Land</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-
-<!-- Loader animation -->
-
+	<!-- Loader animation -->
 	<div id="">
-			<center>
-				<a class="button" href="" id="makingdifferenttimer" rel="nofollow" style="display: none;"
-					target="_blank">Download</a>
-				<div id="mdtimer">
-					<img border="0" src="http://www.pictureshack.us/images/16942_Preloader_10.gif" alt="Pulpit rock"
-						loading-bar-spinner width="128" height="128"></div>
-			</center>
+		<center>
+			<a class="button" href="" id="makingdifferenttimer" rel="nofollow" style="display: none;" target="_blank">Download</a>
+			<div id="mdtimer">
+				<img border="0" src="http://www.pictureshack.us/images/16942_Preloader_10.gif" alt="Pulpit rock" loading-bar-spinner width="128" height="128"></div>
+		</center>
+	</div>
+ 	<!-- Mustach here -->
+	<div id="body"></div>
+	<!-- Registration form -->
+	<div class="testbox">
+		<h1>Registration</h1>
 
-		</div>
+		<div id = "formBody">
+			<form >
+				<hr>
+				<div class="accounttype">
+					<input type="radio" value="None" id="radioOne" name="account" checked />
+					<label for="radioOne" class="radio" chec>Personal</label>
+					<input type="radio" value="None" id="radioTwo" name="account" />
+					<label for="radioTwo" class="radio">Company</label>
+				</div>
+				<hr>
+				<label id="icon" for="name"><i class="icon-envelope "></i></label>
+				<input type="text" name="name" id="Regname" placeholder="Name" required />
 
+				<label id="icon" for="image"><i class="icon-user"></i></label>
+				<input type="text" name="image" id="Regimg1" placeholder="First Image" required />
 
-<!-- Registration form -->
+				<label id="icon" for="image2"><i class="icon-user"></i></label>
+				<input type="text" name="image2" id="Regimg2" placeholder="Second Image" required />
 
-	
-			
-					
+				<label id="icon" for="Description"><i class="icon-shield"></i></label>
+				<input type="text" name="Description" id="Regdescription" placeholder="Description" required />
 
+				<label id="icon" for="price"><i class="icon-user"></i></label>
+				<input type="number" name="price" id="Regprice" placeholder="Price of Land in aettos" required />
+
+				<div class="gender">
+					<input type="radio" value="None" id="male" name="gender" checked />
+					<label for="male" class="radio" chec>Male</label>
+					<input type="radio" value="None" id="female" name="gender" />
+					<label for="female" class="radio">Female</label>
+				</div>
+				<p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+				<!-- <a href="index.html" class=" regBtn button">Register</a> -->
+				<div>
+						<button class="regBtns buttons" >Register</button>
+				</div>
 				
-		
-
- <!-- Mustach here -->
-		<div id="body">
-
+			</form>
 		</div>
-
-		<div class="testbox">
-			<h1>Registration</h1>
-
-			<div id = "formBody">
-				<form >
-					<hr>
-					<div class="accounttype">
-						<input type="radio" value="None" id="radioOne" name="account" checked />
-						<label for="radioOne" class="radio" chec>Personal</label>
-						<input type="radio" value="None" id="radioTwo" name="account" />
-						<label for="radioTwo" class="radio">Company</label>
-					</div>
-					<hr>
-					<label id="icon" for="name"><i class="icon-envelope "></i></label>
-					<input type="text" name="name" id="Regname" placeholder="Name" required />
-	
-					<label id="icon" for="image"><i class="icon-user"></i></label>
-					<input type="text" name="image" id="Regimg1" placeholder="First Image" required />
-	
-					<label id="icon" for="image2"><i class="icon-user"></i></label>
-					<input type="text" name="image2" id="Regimg2" placeholder="Second Image" required />
-	
-					<label id="icon" for="Description"><i class="icon-shield"></i></label>
-					<input type="text" name="Description" id="Regdescription" placeholder="Description" required />
-	
-					<label id="icon" for="price"><i class="icon-user"></i></label>
-					<input type="number" name="price" id="Regprice" placeholder="Price of Land in aettos" required />
-	
-					<div class="gender">
-						<input type="radio" value="None" id="male" name="gender" checked />
-						<label for="male" class="radio" chec>Male</label>
-						<input type="radio" value="None" id="female" name="gender" />
-						<label for="female" class="radio">Female</label>
-					</div>
-					<p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
-					<!-- <a href="index.html" class=" regBtn button">Register</a> -->
-					<div>
-							<button class="regBtns buttons" >Register</button>
-					</div>
-					
-				</form>
-			</div>
-			</div>
-
-		
-		
-	
-
-
-	
-
+	</div>
 	<!-- Footer -->
 	<footer class="footer-container">
-
 		<div class="container">
 			<div class="row">
-
 				<div class="col">
-					&copy; KusuConsults<a href="dacade.org">Dacade</a>.
+					&copy; KusuConsults<a href="https://dacade.org">Dacade</a>.
 				</div>
-
 			</div>
 		</div>
-
 	</footer>
-
-
 
 	<script id="template" type="x-tmpl-mustache">
 		<!-- Top content -->
@@ -218,8 +179,6 @@
 				</div>
 			</div>
 
-
-
 			{{/LandArray}}
 	</script>
 
@@ -239,22 +198,12 @@
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
 	</script>
 
-
 	<script src="assets/js/jquery.backstretch.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	
-
-	
-	
-	<script src="index.js"></script>
+	<script src="assets/js/index.js"></script>
 	<script src="assets/js/loader.js"></script>
-
-
-
-
-
 </body>
-
 </html>
