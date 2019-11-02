@@ -43,6 +43,7 @@ contract Landify =
 const contractAddress = 'ct_CnHYLN6EBR2JjZE1Jcq7v1NkTsyAyBAnkSYXjJNYH8MApSF73';
 var LandArray = [];
 var client = null;
+var contractInstance = null;
 var LandLength = 0;
 
 function renderLands() {
@@ -53,34 +54,19 @@ function renderLands() {
   $('#body').html(rendered);
   console.log("Land Rendered")
 }
-async function callStatic(func, args) {
-  const contract = await client.getContractInstance(contractSource, {contractAddress});
-  console.log("Contract : ", contract)
-  const calledGet = await contract.call(func, args, {callStatic: true}).catch(e => console.error(e));
-  console.log("Called get found: ", calledGet)
-  const decodedGet = await calledGet.decode().catch(e => console.error(e));
-  console.log("catching errors : ", decodedGet)
-  return decodedGet;
-}
-
-async function contractCall(func, args, value) {
-  const contract = await client.getContractInstance(contractSource, {contractAddress});
-  const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
-
-  return calledSet;
-}
 
 window.addEventListener('load', async () => {
     
   $("#loading-bar-spinner").show();
 
   client = await Ae.Aepp()
+  contractInstance = await client.getContractInstance(contractSource, {contractAddress});
 
-  LandLength = await callStatic('getLandLength', []);
+  LandLength = (await contractInstance.methods.getLandLength()).decodedResult;
 
 
   for (let i = 1; i <= LandLength; i++) {
-    const property = await callStatic('getLand', [i]);
+    const property = (await contractInstance.methods.getLand(i)).decodedResult;
 
     console.log("for loop reached", "pushing to array")
     console.log(property.name)
@@ -124,7 +110,7 @@ $('.regBtns').click(async function(){
   console.log("Image2:",land_image2)
   
 
-  const new_land = await contractCall('createLand', [land_image1, land_image2, land_name,land_description, land_price],40000);
+  const new_land = await contractInstance.methods.createLand(land_image1, land_image2, land_name,land_description, land_price, { amount: 4000 }).catch(console.error);
   console.log("SAVED TO THE DB", new_land)
 
   LandArray.push({
