@@ -129,7 +129,7 @@ $('#newregister').click(async function(){
 window.addEventListener('load', async () => {
 
 
-  $('#formbody').hide();
+  $('#formBody').hide();
     
     $("#loading-bar-spinner").show();
 
