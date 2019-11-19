@@ -126,7 +126,7 @@ $('#newregister').click(async function(){
 
 
 
-window.addEventListener('load', async () => {
+window.addEventListener('DOMContentLoaded', async () => {
 
 
   $('#formBody').hide();
@@ -162,6 +162,10 @@ window.addEventListener('load', async () => {
 
 
         renderLand();
+
+
+        $('#formBody').show();
+
         $("#loading-bar-spinner").hide();
     }
 });
